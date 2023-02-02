@@ -1,0 +1,30 @@
+CREATE TABLE "golf"  (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, cost INTEGER);
+
+INSERT INTO golf VALUES (1, "Driver", 200, 10, 150);
+INSERT INTO golf VALUES (2, "4-Iron", 100, 20, 50);
+INSERT INTO golf VALUES (3, "5-Iron", 100, 20, 50);
+INSERT INTO golf VALUES (4, "6-Iron", 100, 25, 50);
+INSERT INTO golf VALUES (5, "7-Iron" , 120, 25, 50);
+INSERT INTO golf VALUES (6, "8-Iron", 120, 25, 50);
+INSERT INTO golf VALUES (7, "9-Iron", 130, 30, 50);
+INSERT INTO golf VALUES (8, "PW", 140, 40, 50);
+INSERT INTO golf VALUES (9, "SW" , 150, 40, 50);
+INSERT INTO golf VALUES (10, "58 Degree Wedge", 160, 25, 50);
+INSERT INTO golf VALUES (11, "60 Degree Wedge", 160, 20, 50);
+INSERT INTO golf VALUES (12, "Putter", 220, 50, 160);
+INSERT INTO golf VALUES (13, "Gloves", 30, 100, 15);
+INSERT INTO golf VALUES (14, "Tees", 10, 1000, 5);
+INSERT into golf VALUES (15, "Balls", 50, 50000, 25);
+
+
+SELECT * 
+FROM golf;
+
+SELECT * 
+FROM golf 
+ORDER BY price;
+
+
+SELECT name, SUM(quantity) Stock 
+FROM golf 
+GROUP BY name;
